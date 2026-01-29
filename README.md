@@ -16,9 +16,11 @@
 │   ├── transformer/  # Transformer 实现
 │   └── finetune/     # LLM 微调脚本
 └── README.md      # 本文件
+```
+
 
 ## 📝 更新日志
-- **2026-01-28**：仓库初始化，添加 README 与基础配置
+- **2026-01-29**：仓库初始化，添加 README 与基础配置, 添加了project文档和docs文档
 - **[待补充]**：后续更新记录
 
 ## 📄 License
