@@ -4,6 +4,7 @@
 ## 具体任务列表
 
 ### 任务1：鸢尾花分类
+博客地址：[手把手教你使用Pytorch训练自己的分类模型](https://blog.csdn.net/echoson/article/details/128130360?ops_request_misc=elastic_search_misc&request_id=05ff4476a37de76186deb627e0abf3b5&biz_id=0&utm_medium=distribute.pc_search_result.none-task-blog-2~all~top_click~default-1-128130360-null-null.142^v102^pc_search_result_base1&utm_term=%E6%89%8B%E6%8A%8A%E6%89%8B%E6%95%99%E4%BD%A0%E4%BD%BF%E7%94%A8Pytorch%E8%AE%AD%E7%BB%83%E8%87%AA%E5%B7%B1%E7%9A%84%E5%88%86%E7%B1%BB%E6%A8%A1%E5%9E%8B&spm=1018.2226.3001.4187)
 #### 任务要求
 - 数据集来源：`from sklearn.datasets import load_iris`
 - 技术栈：PyTorch
