@@ -7,8 +7,28 @@
 硅基流动的 API 基础地址（固定值，无需修改）
     base_url="https://api.siliconflow.cn/v1"
     <img width="2202" height="150" alt="image" src="https://github.com/user-attachments/assets/c2cdddb7-5210-4bec-9257-5cc1b2b31ca9" />
+代码如下：
+'''
+有关model:
+“deepseek-chat”：调用DeepSeek-V3模型，适合大多数日常对话和文本生成任务。
 
-
+“deepseek-reasoner”：调用DeepSeek-R1模型，该模型擅长展示推理过程，适合需要深度思考的复杂问题。'''
+from openai import OpenAI
+client = OpenAI(
+    api_key="sk-olcrkbxpwgseittqcnsqhokycublteikefzvehwhnjyslzma",
+    base_url="https://api.siliconflow.cn/v1"
+)
+response=client.chat.completions.create(
+    model="deepseek-ai/DeepSeek-V3",#这个要去看文档，选择你需要的模型
+    messages=[
+        {"role": "system", "content": "你是我的人工智能助手，协助我解答问题和提供信息。"},
+        {"role": "user", "content": "请介绍一下深度学习的基本概念。"}
+    ],
+    max_tokens=500,
+    temperature=0.7
+)
+#关键字参数，Python 会根据参数名来识别，而不是根据位置。
+print(response.choices[0].message.content)
 * 探索1：了解API调用大模型的各个参数含义，可以通过寻找教程、阅读手册等
 
 
