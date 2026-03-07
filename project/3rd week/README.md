@@ -8,11 +8,7 @@
     base_url="https://api.siliconflow.cn/v1"
     <img width="2202" height="150" alt="image" src="https://github.com/user-attachments/assets/c2cdddb7-5210-4bec-9257-5cc1b2b31ca9" />
 代码如下：
-'''
-有关model:
-“deepseek-chat”：调用DeepSeek-V3模型，适合大多数日常对话和文本生成任务。
-
-“deepseek-reasoner”：调用DeepSeek-R1模型，该模型擅长展示推理过程，适合需要深度思考的复杂问题。'''
+```
 from openai import OpenAI
 client = OpenAI(
     api_key="sk-olcrkbxpwgseittqcnsqhokycublteikefzvehwhnjyslzma",
@@ -29,6 +25,7 @@ response=client.chat.completions.create(
 )
 #关键字参数，Python 会根据参数名来识别，而不是根据位置。
 print(response.choices[0].message.content)
+```
 * 探索1：了解API调用大模型的各个参数含义，可以通过寻找教程、阅读手册等
 
 
