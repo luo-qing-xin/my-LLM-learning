@@ -26,8 +26,25 @@ response=client.chat.completions.create(
 #关键字参数，Python 会根据参数名来识别，而不是根据位置。
 print(response.choices[0].message.content)
 ```
-* 探索1：了解API调用大模型的各个参数含义，可以通过寻找教程、阅读手册等
+* 探索1：了解API调用大模型的各个[参数含义](https://chat.deepseek.com/share/0nc7ayhpnk9rbipk7t
+)，可以通过寻找教程、阅读手册等
+messages
 
+model
+
+temperature
+
+top_p
+
+max_tokens
+
+stream
+
+presence_penalty
+
+frequency_penalty
+
+stop
 
 * 探索2：设计prompt，在鸢尾花数据集上完成分类，调整prompt查看区别
 * 探索3：对比之前鸢尾花分类方法，代码实现逻辑上有何异同
