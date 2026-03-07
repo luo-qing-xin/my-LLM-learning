@@ -4,8 +4,14 @@
 学习使用API的方式调用大模型：
 
 我是使用的[硅基流动 (SiliconFlow)](https://cloud.siliconflow.cn/me/account/ak)的API（因为有16元的代金券嘻嘻）
+硅基流动的 API 基础地址（固定值，无需修改）
+    base_url="https://api.siliconflow.cn/v1"
+    <img width="2202" height="150" alt="image" src="https://github.com/user-attachments/assets/c2cdddb7-5210-4bec-9257-5cc1b2b31ca9" />
+
 
 * 探索1：了解API调用大模型的各个参数含义，可以通过寻找教程、阅读手册等
+
+
 * 探索2：设计prompt，在鸢尾花数据集上完成分类，调整prompt查看区别
 * 探索3：对比之前鸢尾花分类方法，代码实现逻辑上有何异同
 * 探索4：使用GPT-2模型分类鸢尾花，对比当下先进的LLM（不局限在准确率上，所有的都可以分享）
