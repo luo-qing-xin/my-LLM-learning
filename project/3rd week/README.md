@@ -3,10 +3,11 @@
 
 学习使用API的方式调用大模型：
 
-我是使用的[硅基流动 (SiliconFlow)](https://cloud.siliconflow.cn/me/account/ak)的API（因为有16元的代金券嘻嘻）
+我是使用的[硅基流动 (SiliconFlow)](https://cloud.siliconflow.cn/me/account/ak)的API（因为有16元的代金券）
+
 硅基流动的 API 基础地址（固定值，无需修改）
     base_url="https://api.siliconflow.cn/v1"
-    <img width="2202" height="150" alt="image" src="https://github.com/user-attachments/assets/c2cdddb7-5210-4bec-9257-5cc1b2b31ca9" />
+   
 代码如下：
 ```
 from openai import OpenAI
