@@ -34,9 +34,7 @@ messages
 
 model
 
-temperature
-
-top_p
+temperature,top_p
 
 max_tokens
 
