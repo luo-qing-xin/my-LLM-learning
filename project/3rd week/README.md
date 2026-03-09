@@ -64,3 +64,8 @@ stop
 
 下阶段任务预告：Learn to Evaluate LLMs on HumanEval Code Generation Benchmark
 （感兴趣可以先探索并分享一部分进展）
+
+上周由于时间仓促，没能完成一些任务，故继续研究：
+### api怎么不搞到代码里？
+1. 使用环境变量（记得勾选vs code中的设置选项）
+### 
