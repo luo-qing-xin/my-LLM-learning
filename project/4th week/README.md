@@ -24,3 +24,22 @@ HumanEval benchmark 是一个 代码生成能力评测数据集，由 OpenAI 提
 * 目标二：掌握多线程/异步的方式调用api
 * 目标三：将推理的结果以json或jsonl的格式存储
 * 目标四：评测至少三个大模型
+五、一个很多人不知道的加分点
+
+如果你想 做得更完整一点（老师会很满意），可以再跑一个模型做对比，比如：
+
+DeepSeek-V3
+vs
+DeepSeek-Coder
+
+或者：
+
+temperature = 0.2
+vs
+temperature = 0.8
+
+然后比较：
+
+pass@1
+
+这就是 benchmark 对比实验
