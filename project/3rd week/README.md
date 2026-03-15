@@ -37,7 +37,7 @@ response=client.chat.completions.create(
 ```
 ### 探索1：了解API调用大模型的各个[参数含义](https://chat.deepseek.com/share/0nc7ayhpnk9rbipk7t)，可以通过寻找教程、阅读手册等
 
-messages*
+messages*（现在大部分是messages，还有propmt, [区别](https://chat.deepseek.com/share/w84p1csvyqhdiwfcdn)在此）
 
 model*
 
