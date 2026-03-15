@@ -1,7 +1,7 @@
 # Some Exporation
 这次是开学的第一周，还挺忙的，于是...把项目拖到了周末来做：
 
-学习使用API的方式调用大模型：
+## 学习使用API的方式调用大模型：
 
 我是使用的[硅基流动 (SiliconFlow)](https://cloud.siliconflow.cn/me/account/ak)的API（因为有16元的代金券）
 
@@ -27,8 +27,7 @@ response=client.chat.completions.create(
 #关键字参数，Python 会根据参数名来识别，而不是根据位置。
 print(response.choices[0].message.content)
 ```
-* 探索1：了解API调用大模型的各个[参数含义](https://chat.deepseek.com/share/0nc7ayhpnk9rbipk7t
-)，可以通过寻找教程、阅读手册等
+### 探索1：了解API调用大模型的各个[参数含义](https://chat.deepseek.com/share/0nc7ayhpnk9rbipk7t)，可以通过寻找教程、阅读手册等
 
 messages*
 
@@ -46,26 +45,18 @@ frequency_penalty
 
 stop
 
-* 探索2：设计prompt，在鸢尾花数据集上完成分类，调整prompt查看区别
-* 
-* 探索3：对比之前鸢尾花分类方法，代码实现逻辑上有何异同
-  
+### 探索2：设计prompt，在鸢尾花数据集上完成分类，调整prompt查看区别
+
+### 探索3：对比之前鸢尾花分类方法，代码实现逻辑上有何异同
 #### （1）异：
-  
   1. 数据方面：有无训练集
   2. 模型是否提供=>库不同，
   3. 输入，一个是输入数据集，另一个将数据嵌在prompt中
   4. 是否需要训练（从有无.pth文件生成就能看出）有无显式训练
   5. 超参数：一个是机器学习的超参数，一个是api调用时的超参数
-
-* 探索4：使用GPT-2模型分类鸢尾花，对比当下先进的LLM（不局限在准确率上，所有的都可以分享）
-
+### 探索4：使用GPT-2模型分类鸢尾花，对比当下先进的LLM（不局限在准确率上，所有的都可以分享）
 可能使用到的资源：[https://www.volcengine.com](https://www.volcengine.com)
 
-下阶段任务预告：Learn to Evaluate LLMs on HumanEval Code Generation Benchmark
-（感兴趣可以先探索并分享一部分进展）
 
 上周由于时间仓促，没能完成一些任务，故继续研究：
-### api怎么不搞到代码里？
-1. 使用环境变量（记得勾选vs code中的设置选项）
-### 
+1.api怎么不搞到代码里？——使用环境变量（记得勾选vs code中的设置选项）
