@@ -49,7 +49,7 @@ stream
 
 presence_penalty
 
-frequency_penalty
+frequency_penalty   
 
 stop
 
