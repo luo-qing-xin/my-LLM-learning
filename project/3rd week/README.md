@@ -11,21 +11,29 @@
 代码如下：
 ```
 from openai import OpenAI
+import os
+from dotenv import load_dotenv
+load_dotenv() # 加载 .env 文件中的环境变量
+api_key = os.getenv("DEEPSEEK_API_KEY")
+
 client = OpenAI(
-    api_key="sk-olcrkbxpwgseittqcnsqhokycublteikefzvehwhnjyslzma",
+    api_key=api_key,
     base_url="https://api.siliconflow.cn/v1"
 )
+
 response=client.chat.completions.create(
-    model="deepseek-ai/DeepSeek-V3",#这个要去看文档，选择你需要的模型
+    model="deepseek-ai/DeepSeek-V3",    
+    #这个要去看文档，选择你需要的模型
     messages=[
         {"role": "system", "content": "你是我的人工智能助手，协助我解答问题和提供信息。"},
-        {"role": "user", "content": "请介绍一下深度学习的基本概念。"}
+        {"role": "user", "content": input("请输入你的问题：")}
+    #这里本来是固定的，我改成能问答的了
     ],
     max_tokens=500,
     temperature=0.7
 )
-#关键字参数，Python 会根据参数名来识别，而不是根据位置。
-print(response.choices[0].message.content)
+    #关键字参数，Python 会根据参数名来识别，而不是根据位置。
+    print(response.choices[0].message.content)
 ```
 ### 探索1：了解API调用大模型的各个[参数含义](https://chat.deepseek.com/share/0nc7ayhpnk9rbipk7t)，可以通过寻找教程、阅读手册等
 
