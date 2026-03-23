@@ -79,7 +79,18 @@ https://github.com/deepseek-ai/DeepSeek-Coder
 #### 1. 读两篇论文并分享
 bingqi       https://arxiv.org/pdf/2107.03374
 
-[CSDN论文精读](https://blog.csdn.net/heroding23/article/details/133189960?ops_request_misc=elastic_search_misc&request_id=bcec7c224f63971b5e484eb05bbc9c38&biz_id=0&utm_medium=distribute.pc_search_result.none-task-blog-2~all~sobaiduend~default-1-133189960-null-null.142^v102^pc_search_result_base1&utm_term=Evaluating%20Large%20Language%20Models%20Trained%20on%20Code&spm=1018.2226.3001.4187)
+
+
+[CSDN论文精读](https://blog.csdn.net/heroding23/article/details/133189960?
+
+真实场景下代码都是不断迭代debug的结果
+<img width="1185" height="855" alt="image" src="https://github.com/user-attachments/assets/aa142575-9fd7-4bb1-b546-84d4b73fa4fc" />
+作者的代码lexer基于GPT-3文本的tokenizer实现。但是由于代码和文本分布不同，tokenizer并不高效，最大的根源来自于空格和空行，为此作者加入了额外的token集用于表示不同长度的空白，这使得作者能够少用30%的token来表示代码。
+
+p值设为0.95。这是什么？？
+
+
+*上图展示的是排序算法的性能，即允许模型生成k的答案，只是根据不同的策略和指标挑选最好的结果进行单元测试，Oracle虽然是最好的策略，但是在现实中，你不可能对每个方案都进行一次测试。因此相对比较合理的方案是对任何一个解，去看每个候选token在softmax中的概率取log算均值，将均值最高的选择出来相对性能较好*。没看懂
 
 zilu            https://arxiv.org/abs/2108.07732
 
