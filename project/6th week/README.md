@@ -2,6 +2,8 @@
 ## Task 1: Benchmark
 在 HumanEval 基准上评测 DeepSeek 系列模型，与技术报告评测结果对齐
 
+测试集就像是一个针对AI的“闭卷考试”，题目是新的，没有在市面上流通的，考验真能力。
+
 https://github.com/deepseek-ai/DeepSeek-V3?tab=readme-ov-file#4-evaluation-results
 
 DeepSeek-V3 是一个 超大规模 MoE（Mixture-of-Experts，混合专家）语言模型,总参数量 671B，但每个 token 只激活 37B 参数，所以推理更高效
