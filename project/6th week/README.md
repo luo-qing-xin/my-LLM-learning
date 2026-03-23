@@ -77,6 +77,8 @@ https://github.com/deepseek-ai/DeepSeek-Coder
 #### 1. 读两篇论文并分享
 bingqi       https://arxiv.org/pdf/2107.03374
 
+[CSDN论文精读](https://blog.csdn.net/heroding23/article/details/133189960?ops_request_misc=elastic_search_misc&request_id=bcec7c224f63971b5e484eb05bbc9c38&biz_id=0&utm_medium=distribute.pc_search_result.none-task-blog-2~all~sobaiduend~default-1-133189960-null-null.142^v102^pc_search_result_base1&utm_term=Evaluating%20Large%20Language%20Models%20Trained%20on%20Code&spm=1018.2226.3001.4187)
+
 zilu            https://arxiv.org/abs/2108.07732
 
 pinzheng   https://openreview.net/forum?id=chfJJYC3iL 
