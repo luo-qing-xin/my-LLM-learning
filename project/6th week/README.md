@@ -71,6 +71,8 @@ AlpacaEval 2.0 70.0
 
 https://github.com/deepseek-ai/DeepSeek-Coder
 
+**这页在介绍 DeepSeek-V3 是一个参数规模极大、训练效率很高、在数学和代码上尤其强、并且整体性能已接近顶级闭源模型的开源 MoE 大语言模型。**
+
 ## Task 2: Paper Reading
 #### 1. 读两篇论文并分享
 bingqi       https://arxiv.org/pdf/2107.03374
