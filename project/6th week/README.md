@@ -4,6 +4,8 @@
 
 测试集就像是一个针对AI的“闭卷考试”，题目是新的，没有在市面上流通的，考验真能力。
 
+但是目前，因为数据污染、过拟合、过饱和以及仅关注代码生成的问题，现有的评估基准（如HumanEvla、MBPP）已无法充分评估其能力。
+
 https://github.com/deepseek-ai/DeepSeek-V3?tab=readme-ov-file#4-evaluation-results
 
 DeepSeek-V3 是一个 超大规模 MoE（Mixture-of-Experts，混合专家）语言模型,总参数量 671B，但每个 token 只激活 37B 参数，所以推理更高效
