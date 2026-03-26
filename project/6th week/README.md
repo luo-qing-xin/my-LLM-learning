@@ -79,6 +79,12 @@ https://github.com/deepseek-ai/DeepSeek-Coder
 
 ## Task 2: Paper Reading
 #### 1. 读两篇论文并分享
+
+吕品正（me）   [《LIVECODEBENCH》](https://openreview.net/forum?id=chfJJYC3iL )
+
+（如果能读一读审稿人意见和作者回复就更好了）
+
+
 谢秉奇       https://arxiv.org/pdf/2107.03374
 
 
@@ -106,9 +112,7 @@ https://github.com/deepseek-ai/DeepSeek-Coder
 
 [论文摘要](https://zhuanlan.zhihu.com/p/1931417730176747302)
 
-吕品正（me）   [《LIVECODEBENCH》](https://openreview.net/forum?id=chfJJYC3iL )
 
-（如果能读一读审稿人意见和作者回复就更好了）
 
 #### 2. 以及一篇自己找的论文
 要求：2024年1月之后，与大模型、篮球相关（因为我们目前的研究方向是AI赋能篮球方面的）
