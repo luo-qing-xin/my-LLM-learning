@@ -99,7 +99,7 @@ bingqi       https://arxiv.org/pdf/2107.03374
 8. 现在有一个观点是在大模型的更新迭代前少进行微调，先吃尽版本更新的红利。
 9. 因为这些代码看起来会更加准确，用户难以识别出错误，可实际上已经做了有害的事情。，**这说明大模型也会出错！！！**
 
-zilu            https://arxiv.org/abs/2108.07732
+zilu            [Program Synthesis with Large Language Models](https://arxiv.org/abs/2108.07732)
 
 [论文摘要](https://zhuanlan.zhihu.com/p/1931417730176747302)
 
