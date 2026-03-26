@@ -79,7 +79,7 @@ https://github.com/deepseek-ai/DeepSeek-Coder
 
 ## Task 2: Paper Reading
 #### 1. 读两篇论文并分享
-bingqi       https://arxiv.org/pdf/2107.03374
+谢秉奇       https://arxiv.org/pdf/2107.03374
 
 
 
@@ -99,14 +99,14 @@ bingqi       https://arxiv.org/pdf/2107.03374
 8. 现在有一个观点是在大模型的更新迭代前少进行微调，先吃尽版本更新的红利。
 9. 因为这些代码看起来会更加准确，用户难以识别出错误，可实际上已经做了有害的事情。，**这说明大模型也会出错！！！**
 
-zilu            [《Program Synthesis with Large Language Models》](https://arxiv.org/abs/2108.07732)
+邱子路            [《Program Synthesis with Large Language Models》](https://arxiv.org/abs/2108.07732)
 
 1. 什么叫做微调fine-tuning？？
 2. 什么叫代码上的机器学习 
 
 [论文摘要](https://zhuanlan.zhihu.com/p/1931417730176747302)
 
-pinzheng   https://openreview.net/forum?id=chfJJYC3iL 
+吕品正（me）   [《LIVECODEBENCH》](https://openreview.net/forum?id=chfJJYC3iL )
 
 （如果能读一读审稿人意见和作者回复就更好了）
 
