@@ -12,13 +12,14 @@
 - 代码领域的大语言模型（LLMs）发展迅速  
 - 现有评测基准（如 HUMANEVAL、MBPP）存在问题：
   - 数据污染（训练数据泄漏）
+ 
+  LLM 是在海量且难以探查的语料库上训练的，当前的基准面临着数据污染的风险，因为训练数据可能包含这些基准样本。
   - 过拟合
   - 难度饱和
   - 仅评测代码生成（不全面）
 
 #### 2. 方法概述
 提出新的评测基准：
-
 > **LIVECODEBENCH（LCB）**
 
 ##### 核心特点
@@ -42,10 +43,12 @@
 
 ##### 4.2 多维能力评测
 评测四种能力：
-- Code Generation（代码生成）
-- Self-Repair（代码修复）
-- Code Execution（代码执行）
-- Test Output Prediction（输出预测）
+- Code Generation（代码生成）就是按题目，AI写代码
+- Self-Repair（代码修复）就是debug
+- Code Execution（代码执行）在脑子里跑一遍代码，自己推理答案
+- Test Output Prediction（输出预测）给题目和输入值，自己推理出答案
+- 
+后两项统称为AI的颅内思考
 
 #### 5. 实验与发现
 - 评测了 50+ 大语言模型
