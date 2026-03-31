@@ -80,9 +80,155 @@ https://github.com/deepseek-ai/DeepSeek-Coder
 ## Task 2: Paper Reading
 #### 1. 读两篇论文并分享
 
-吕品正（me）   [《LIVECODEBENCH》](https://openreview.net/forum?id=chfJJYC3iL )
+吕品正（me）  
 
 [全文翻译](https://chat.deepseek.com/share/bngk595gw2mmcn51rt)
+
+# [《LIVECODEBENCH》](https://openreview.net/forum?id=chfJJYC3iL )
+
+## Abstract
+
+Large Language Models (LLMs) applied to code-related applications have emerged as a prominent field...
+
+In this work, we propose **LIVECODEBENCH**, a comprehensive and contamination-free evaluation benchmark for code LLMs.
+
+Key features include:
+- Continuous collection of new problems (LeetCode, AtCoder, Codeforces)
+- Evaluation beyond code generation:
+  - Self-repair
+  - Code execution
+  - Test output prediction
+
+---
+
+## 1. Introduction
+
+Code has emerged as an important application area for LLMs...
+
+### Limitations of Existing Benchmarks
+- Focus only on code generation
+- Suffer from:
+  - Data contamination
+  - Overfitting
+  - Saturation
+
+---
+
+## 2. Motivation
+
+We introduce LIVECODEBENCH based on:
+
+### 2.1 Live Updates
+- Avoid contamination by using newly released problems
+- Evaluate models only on post-cutoff data
+
+### 2.2 Holistic Evaluation
+Evaluate multiple capabilities:
+- Code generation
+- Self-repair
+- Code execution
+- Test output prediction
+
+### 2.3 High-Quality Problems
+- Sourced from real platforms
+- Carefully filtered
+- Rich test cases (avg >18)
+
+### 2.4 Difficulty-Guided Curation
+- Avoid too-hard problems
+- Maintain meaningful model comparison
+
+---
+
+## 3. Benchmark Overview
+
+- 600+ problems
+- Time range: May 2023 – Aug 2024
+- Platforms:
+  - LeetCode
+  - AtCoder
+  - Codeforces
+
+---
+
+## 4. Evaluation Scenarios
+
+### 4.1 Code Generation
+- Input: problem description
+- Output: correct program
+
+### 4.2 Self-Repair
+- Model fixes incorrect code using feedback
+
+### 4.3 Code Execution
+- Predict output of given code
+
+### 4.4 Test Output Prediction
+- Predict expected output from problem + input
+
+---
+
+## 5. Key Findings
+
+### 5.1 Contamination Detection
+- Performance drops after model cutoff dates
+- Confirms training data leakage
+
+### 5.2 Holistic Capability Differences
+- Models perform differently across tasks
+
+### 5.3 HUMANEVAL Overfitting
+- Some models perform well only on HUMANEVAL
+- Poor generalization
+
+### 5.4 Open vs Closed Models
+- Closed models generally outperform
+- Gap remains significant
+
+---
+
+## 6. Dataset Construction
+
+### Data Collection
+- Automated scraping
+- Extract:
+  - Problem statements
+  - Test cases
+  - Solutions
+
+### Filtering
+- Remove:
+  - Multi-answer problems
+  - Interactive tasks
+
+---
+
+## 7. Experimental Setup
+
+### Models
+- 50+ models
+- Range: 1.3B → 70B
+
+### Metric
+- **PASS@1**
+
+---
+
+## 8. Conclusion
+
+LIVECODEBENCH:
+- Avoids contamination
+- Provides holistic evaluation
+- Enables more reliable benchmarking
+
+---
+
+## Keywords
+- Large Language Models
+- Code Generation
+- Benchmark
+- Evaluation
+- Contamination
 大概思路：老的bench不行，存在污染=>搞出来了新的bench --livecodebench（LCB），实时更新并且能考察更广泛的能力=>证明，按时间分段的评估是规避污染的有效方法
 ##### 引言：评估方法却相对停滞
 ##### 方法：1.我们根据带有发布日期的标签来评估模型在新问题上的表现
