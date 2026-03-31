@@ -8,16 +8,55 @@
 
 ## Abstract
 
-Large Language Models (LLMs) applied to code-related applications have emerged as a prominent field...
+#### 1. 问题背景
+- 代码领域的大语言模型（LLMs）发展迅速  
+- 现有评测基准（如 HUMANEVAL、MBPP）存在问题：
+  - 数据污染（训练数据泄漏）
+  - 过拟合
+  - 难度饱和
+  - 仅评测代码生成（不全面）
 
-In this work, we propose **LIVECODEBENCH**, a comprehensive and contamination-free evaluation benchmark for code LLMs.
+#### 2. 方法概述
+提出新的评测基准：
 
-Key features include:
-- Continuous collection of new problems (LeetCode, AtCoder, Codeforces)
-- Evaluation beyond code generation:
-  - Self-repair
-  - Code execution
-  - Test output prediction
+> **LIVECODEBENCH（LCB）**
+
+##### 核心特点
+- 持续从真实平台收集新题：
+  - LeetCode
+  - AtCoder
+  - Codeforces
+- 保证评测数据“未被模型见过”（避免污染）
+- 覆盖多种代码能力，而非单一生成任务
+
+#### 3. 数据规模
+- 题目数量：600+
+- 时间范围：2023.05 – 2024.08
+- 属于目前规模最大的代码评测之一
+
+#### 4. 评测创新
+
+##### 4.1 时间切片评测
+- 使用模型训练截止时间之后的数据进行测试  
+- 用于检测数据污染问题
+
+##### 4.2 多维能力评测
+评测四种能力：
+- Code Generation（代码生成）
+- Self-Repair（代码修复）
+- Code Execution（代码执行）
+- Test Output Prediction（输出预测）
+
+#### 5. 实验与发现
+- 评测了 50+ 大语言模型
+- 关键发现：
+  - 可以有效检测数据污染
+  - 传统 benchmark 存在过拟合
+  - 多维评测更真实反映模型能力
+
+#### 6. 一句话总结
+
+> Livecodebench是一个  **动态更新 + 无污染 + 多能力评测** 的新一代代码大模型评测基准。
 
 ---
 
