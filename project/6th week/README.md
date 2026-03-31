@@ -62,6 +62,14 @@
 > Livecodebench是一个  **动态更新 + 无污染 + 多能力评测** 的新一代代码大模型评测基准。
 
 ---
+![0b596d97d9bb8bf9c14cb77382306000](https://github.com/user-attachments/assets/0cf86230-50cf-4f8a-9e51-1eccb44c56d2)
+![becdbad4e44cd43df9079ae3f6591c3d](https://github.com/user-attachments/assets/7f9cf444-50b0-4cd8-99d4-336d745c79cc)
+![40265a89f4703c302c323dceff1a5a30](https://github.com/user-attachments/assets/c043e34d-5e50-4850-b08d-a92cc8521b05)
+![aca9d13d69de6aef06bcb1833c4ac81e](https://github.com/user-attachments/assets/649f585e-1352-4ee5-9d3a-440097ad97cd)
+
+
+
+
 
 ## 1. Introduction
 一些背景+构建这个数据集的原则+一些发现的综述
