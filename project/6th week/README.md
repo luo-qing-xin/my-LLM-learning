@@ -1,4 +1,186 @@
 # Some Tasks：
+
+吕品正（me）  
+
+[全文翻译](https://chat.deepseek.com/share/bngk595gw2mmcn51rt)
+
+# [《LIVECODEBENCH》](https://openreview.net/forum?id=chfJJYC3iL )
+
+## Abstract
+
+Large Language Models (LLMs) applied to code-related applications have emerged as a prominent field...
+
+In this work, we propose **LIVECODEBENCH**, a comprehensive and contamination-free evaluation benchmark for code LLMs.
+
+Key features include:
+- Continuous collection of new problems (LeetCode, AtCoder, Codeforces)
+- Evaluation beyond code generation:
+  - Self-repair
+  - Code execution
+  - Test output prediction
+
+---
+
+## 1. Introduction
+
+Code has emerged as an important application area for LLMs...
+
+### Limitations of Existing Benchmarks
+- Focus only on code generation
+- Suffer from:
+  - Data contamination
+  - Overfitting
+  - Saturation
+
+---
+
+## 2. Motivation
+
+We introduce LIVECODEBENCH based on:
+
+### 2.1 Live Updates
+- Avoid contamination by using newly released problems
+- Evaluate models only on post-cutoff data
+
+### 2.2 Holistic Evaluation
+Evaluate multiple capabilities:
+- Code generation
+- Self-repair
+- Code execution
+- Test output prediction
+
+### 2.3 High-Quality Problems
+- Sourced from real platforms
+- Carefully filtered
+- Rich test cases (avg >18)
+
+### 2.4 Difficulty-Guided Curation
+- Avoid too-hard problems
+- Maintain meaningful model comparison
+
+---
+
+## 3. Benchmark Overview
+从三个竞赛网站上选，LeetCode，AtCoder，Codeforces
+
+* 数据收集：写了自动化的 HTML 爬虫，解析数学公式并排除包含图像的问题，排除了不适合通过输入输出示例评分的问题
+  
+* 些评级将问题分类为 EASY、MEDIUM 和 HARD，以便进行更细粒度的模型比较，大致根据 HUMANEVAL 分数估算难度。
+ 
+* 随时间推移滚动，根据模型发布时间来筛选问题
+---
+
+## 4. Evaluation Scenarios
+模型:评估了 52 个不同规模的模型。从1.3B到70B（什么叫做B,是参数数量？？）
+
+评估指标:
+**使用pass@1指标**
+
+我们使用温度为 0.2、top_p 为 0.95 的核采样
+
+### 4.1 Code Generation
+- Input: problem description
+- Output: correct program
+- 对于指令微调模型，我们使用零样本提示
+- 基础模型使用单样本提示
+
+### 4.2 Self-Repair
+- Model fixes incorrect code using feedback，零样本提示
+
+### 4.3 Code Execution
+- Predict output of given code，使用少样本提示，有和没有思维链提示（什么叫做CoT？？）
+
+### 4.4 Test Output Prediction
+- Predict expected output from ，使用零样本提示，给定problem + input
+
+---
+
+## 5. Key Findings
+
+### 5.1 Contamination Detection
+- Performance drops after model cutoff dates
+- Confirms training data leakage
+
+- <img width="1127" height="807" alt="image" src="https://github.com/user-attachments/assets/3516b683-212e-412a-952a-fb1414991018" />
+
+
+### 5.2 Holistic Capability Differences
+- Models perform differently across tasks
+
+### 5.3 HUMANEVAL Overfitting
+- Some models perform well only on HUMANEVAL
+- Poor generalization
+
+### 5.4 Open vs Closed Models
+- Closed models generally outperform
+- Gap remains significant
+
+---
+
+## 6. Dataset Construction
+
+### Data Collection
+- Automated scraping
+- Extract:
+  - Problem statements
+  - Test cases
+  - Solutions
+
+### Filtering
+- Remove:
+  - Multi-answer problems
+  - Interactive tasks
+
+---
+
+## 7. Experimental Setup
+
+### Models
+- 50+ models
+- Range: 1.3B → 70B
+
+### Metric
+- **PASS@1**
+
+---
+
+## 8. Conclusion
+
+LIVECODEBENCH:
+- Avoids contamination
+- Provides holistic evaluation
+- Enables more reliable benchmarking
+
+---
+
+## Keywords
+- Large Language Models
+- Code Generation
+- Benchmark
+- Evaluation
+- Contamination
+大概思路：老的bench不行，存在污染=>搞出来了新的bench --livecodebench（LCB），实时更新并且能考察更广泛的能力=>证明，按时间分段的评估是规避污染的有效方法
+##### 引言：评估方法却相对停滞
+##### 方法：1.我们根据带有发布日期的标签来评估模型在新问题上的表现
+2.我们使用自我修复场景评估基于执行反馈的多轮编码能力（没太看懂？？）
+3.高质量的问题和测试，测试样例不足，他们通过实施启发式方法来检测和移除不适合基于输入输出自动评分的问题，提供了大量的测试用例。
+##### 1。全面评估
+* 代码生成
+* 自我修复
+* 测试用例输出预测
+* 代码执行（没太理解什么意思）
+* 使用 Pass@1 指标
+##### 2.bench筛选
+
+##### 3.实验设置
+
+##### 4.结果
+  
+#### 相关问题：
+1. 什么是SQL
+2. 用于压力测试解决方案？？hyw
+3. 什么叫做过拟合（HUMANEVAL 过拟合）？？
+4. 以进行鲁棒的对抗性测试for robust adversarial tests
 ## Task 1: Benchmark
 在 HumanEval 基准上评测 DeepSeek 系列模型，与技术报告评测结果对齐
 
@@ -79,185 +261,6 @@ https://github.com/deepseek-ai/DeepSeek-Coder
 
 ## Task 2: Paper Reading
 #### 1. 读两篇论文并分享
-
-吕品正（me）  
-
-[全文翻译](https://chat.deepseek.com/share/bngk595gw2mmcn51rt)
-
-# [《LIVECODEBENCH》](https://openreview.net/forum?id=chfJJYC3iL )
-
-## Abstract
-
-Large Language Models (LLMs) applied to code-related applications have emerged as a prominent field...
-
-In this work, we propose **LIVECODEBENCH**, a comprehensive and contamination-free evaluation benchmark for code LLMs.
-
-Key features include:
-- Continuous collection of new problems (LeetCode, AtCoder, Codeforces)
-- Evaluation beyond code generation:
-  - Self-repair
-  - Code execution
-  - Test output prediction
-
----
-
-## 1. Introduction
-
-Code has emerged as an important application area for LLMs...
-
-### Limitations of Existing Benchmarks
-- Focus only on code generation
-- Suffer from:
-  - Data contamination
-  - Overfitting
-  - Saturation
-
----
-
-## 2. Motivation
-
-We introduce LIVECODEBENCH based on:
-
-### 2.1 Live Updates
-- Avoid contamination by using newly released problems
-- Evaluate models only on post-cutoff data
-
-### 2.2 Holistic Evaluation
-Evaluate multiple capabilities:
-- Code generation
-- Self-repair
-- Code execution
-- Test output prediction
-
-### 2.3 High-Quality Problems
-- Sourced from real platforms
-- Carefully filtered
-- Rich test cases (avg >18)
-
-### 2.4 Difficulty-Guided Curation
-- Avoid too-hard problems
-- Maintain meaningful model comparison
-
----
-
-## 3. Benchmark Overview
-
-- 600+ problems
-- Time range: May 2023 – Aug 2024
-- Platforms:
-  - LeetCode
-  - AtCoder
-  - Codeforces
-
----
-
-## 4. Evaluation Scenarios
-
-### 4.1 Code Generation
-- Input: problem description
-- Output: correct program
-
-### 4.2 Self-Repair
-- Model fixes incorrect code using feedback
-
-### 4.3 Code Execution
-- Predict output of given code
-
-### 4.4 Test Output Prediction
-- Predict expected output from problem + input
-
----
-
-## 5. Key Findings
-
-### 5.1 Contamination Detection
-- Performance drops after model cutoff dates
-- Confirms training data leakage
-
-### 5.2 Holistic Capability Differences
-- Models perform differently across tasks
-
-### 5.3 HUMANEVAL Overfitting
-- Some models perform well only on HUMANEVAL
-- Poor generalization
-
-### 5.4 Open vs Closed Models
-- Closed models generally outperform
-- Gap remains significant
-
----
-
-## 6. Dataset Construction
-
-### Data Collection
-- Automated scraping
-- Extract:
-  - Problem statements
-  - Test cases
-  - Solutions
-
-### Filtering
-- Remove:
-  - Multi-answer problems
-  - Interactive tasks
-
----
-
-## 7. Experimental Setup
-
-### Models
-- 50+ models
-- Range: 1.3B → 70B
-
-### Metric
-- **PASS@1**
-
----
-
-## 8. Conclusion
-
-LIVECODEBENCH:
-- Avoids contamination
-- Provides holistic evaluation
-- Enables more reliable benchmarking
-
----
-
-## Keywords
-- Large Language Models
-- Code Generation
-- Benchmark
-- Evaluation
-- Contamination
-大概思路：老的bench不行，存在污染=>搞出来了新的bench --livecodebench（LCB），实时更新并且能考察更广泛的能力=>证明，按时间分段的评估是规避污染的有效方法
-##### 引言：评估方法却相对停滞
-##### 方法：1.我们根据带有发布日期的标签来评估模型在新问题上的表现
-2.我们使用自我修复场景评估基于执行反馈的多轮编码能力（没太看懂？？）
-3.高质量的问题和测试，测试样例不足，他们通过实施启发式方法来检测和移除不适合基于输入输出自动评分的问题，提供了大量的测试用例。
-##### 1。全面评估
-* 代码生成
-* 自我修复
-* 测试用例输出预测
-* 代码执行（没太理解什么意思）
-* 使用 Pass@1 指标
-##### 2.bench筛选
-从三个竞赛网站上选
-* 数据收集：写了自动化的 HTML 爬虫，解析数学公式并排除包含图像的问题，排除了不适合通过输入输出示例评分的问题
-* 些评级将问题分类为 EASY、MEDIUM 和 HARD，以便进行更细粒度的模型比较，大致根据 HUMANEVAL 分数估算难度。
- 
-随时间推移滚动
-##### 3.实验设置
-模型，评估了 52 个不同规模的模型。
-和评估指标，我们使用温度为 0.2、top_p 为 0.95 的核采样
-* 特定场景
-
-##### 4.结果
-  
-#### 相关问题：
-1. 什么是SQL
-2. 用于压力测试解决方案？？hyw
-3. 什么叫做过拟合（HUMANEVAL 过拟合）？？
-4. 以进行鲁棒的对抗性测试for robust adversarial tests
 （如果能读一读审稿人意见和作者回复就更好了）
 
 
