@@ -181,14 +181,6 @@ LIVECODEBENCH:
 - Enables more reliable benchmarking
 
 ---
-
-## Keywords
-- Large Language Models
-- Code Generation
-- Benchmark
-- Evaluation
-- Contamination
-大概思路：老的bench不行，存在污染=>搞出来了新的bench --livecodebench（LCB），实时更新并且能考察更广泛的能力=>证明，按时间分段的评估是规避污染的有效方法
 ##### 引言：评估方法却相对停滞
 ##### 方法：1.我们根据带有发布日期的标签来评估模型在新问题上的表现
 2.我们使用自我修复场景评估基于执行反馈的多轮编码能力（没太看懂？？）
