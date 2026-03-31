@@ -61,44 +61,26 @@
 ---
 
 ## 1. Introduction
+一些背景+构建这个数据集的原则+一些发现的综述
 
-Code has emerged as an important application area for LLMs...
-
-### Limitations of Existing Benchmarks
-- Focus only on code generation
-- Suffer from:
-  - Data contamination
-  - Overfitting
-  - Saturation
-
----
-
-## 2. Motivation
-
-We introduce LIVECODEBENCH based on:
-
-### 2.1 Live Updates
+原则如下：
+* 实时更新以防止污染
 - Avoid contamination by using newly released problems
 - Evaluate models only on post-cutoff data
-
-### 2.2 Holistic Evaluation
-Evaluate multiple capabilities:
+* 全面评估
 - Code generation
 - Self-repair
 - Code execution
 - Test output prediction
-
-### 2.3 High-Quality Problems
-- Sourced from real platforms
+* 高质量的问题和测试
 - Carefully filtered
 - Rich test cases (avg >18)
-
-### 2.4 Difficulty-Guided Curation
+* 难度引导的问题筛选
 - Avoid too-hard problems
 - Maintain meaningful model comparison
-
 ---
-
+## 2. Motivation
+---
 ## 3. Benchmark Overview
 从三个竞赛网站上选，LeetCode，AtCoder，Codeforces
 
@@ -131,11 +113,8 @@ Evaluate multiple capabilities:
 
 ### 4.4 Test Output Prediction
 - Predict expected output from ，使用零样本提示，给定problem + input
-
 ---
-
 ## 5. Key Findings
-
 ### 5.1 Contamination Detection
 - Performance drops after model cutoff dates
 - Confirms training data leakage
