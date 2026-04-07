@@ -17,6 +17,8 @@ models = [
 ]
 ```
 <img width="1105" height="299" alt="image" src="https://github.com/user-attachments/assets/793f8d3c-e29e-433c-a095-7fa28427dd50" />
+<img width="994" height="657" alt="image" src="https://github.com/user-attachments/assets/97e51362-739a-4dd4-afac-32fcb0b0550d" />
+
 
 而我使用的deepseek-ai/DeepSeek-V3是经过优化过的，所以正确率稍高应该正常
 
