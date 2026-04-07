@@ -24,6 +24,7 @@ models = [
 
 
 下面我要找一个经过humaneval测试（v3.2已经是livecodebench的测试集了）的大模型：
+https://qwen.ai/blog?id=qwen2.5-llm
 
 
 
