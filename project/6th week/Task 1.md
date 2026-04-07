@@ -6,6 +6,21 @@
 https://github.com/deepseek-ai/DeepSeek-V3?tab=readme-ov-file#4-evaluation-results
 
 DeepSeek-V3 是一个 超大规模 MoE（Mixture-of-Experts，混合专家）语言模型,总参数量 671B，但每个 token 只激活 37B 参数，所以推理更高效,训练使用了 14.8 万亿 tokens
+<img width="1108" height="396" alt="image" src="https://github.com/user-attachments/assets/ad5150c9-2301-4b43-b708-cb16570790a0" />
+最初的v3版本被下架了
+
+```
+models = [
+    "deepseek-ai/DeepSeek-V3",
+    "Qwen/Qwen3-Coder-30B-A3B-Instruct",
+    "zai-org/GLM-4.6",
+]
+```
+而我使用的deepseek-ai/DeepSeek-V3是经过优化过的，所以正确率稍高应该正常
+
+下面我要找一个经过humaneval测试（v3.2已经是livecodebench的测试集了）的大模型：
+
+
 
 
 
