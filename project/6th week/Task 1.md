@@ -21,6 +21,8 @@ models = [
 
 
 而我使用的deepseek-ai/DeepSeek-V3是经过优化过的，所以正确率稍高应该正常
+<img width="2129" height="274" alt="image" src="https://github.com/user-attachments/assets/110e2fd7-17e1-4bdf-9582-a062c27d7600" />
+
 
 下面我要找一个经过humaneval测试（v3.2已经是livecodebench的测试集了）的大模型：
 
