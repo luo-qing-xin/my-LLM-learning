@@ -25,6 +25,13 @@ models = [
 
 下面我要找一个经过humaneval测试（v3.2已经是livecodebench的测试集了）的大模型：
 https://qwen.ai/blog?id=qwen2.5-llm
+<img width="1519" height="737" alt="image" src="https://github.com/user-attachments/assets/eda68072-d1ef-4926-b556-050cfcce2e7c" />
+<img width="2046" height="248" alt="image" src="https://github.com/user-attachments/assets/397eb5c6-d43b-43e8-938f-20767d1ab8ba" />
+
+<img width="1509" height="699" alt="image" src="https://github.com/user-attachments/assets/4243fcae-34ea-432e-a493-9a93c9ae55e8" />
+<img width="2060" height="256" alt="image" src="https://github.com/user-attachments/assets/45b1c466-0030-43d9-ac48-2a8fc651f408" />
+
+
 
 
 
