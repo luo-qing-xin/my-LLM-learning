@@ -16,5 +16,9 @@ source .venv/bin/activate
 https://www.modelscope.cn/models/deepseek-ai/DeepSeek-R1-Distill-Qwen-32B/summary
 
 ✔ 模型是基于 DeepSeek‑R1 生成的数据蒸馏而来
+
 ✔ 强调在数学、编程和推理等任务上的性能优势
+
 ✔ 描述了训练策略（强化学习→蒸馏流程）和表现情况，可用作基本技术文档参考。
+<img width="1096" height="248" alt="image" src="https://github.com/user-attachments/assets/d0afcc34-23f7-4d39-89cf-81790f5343d1" />
+
