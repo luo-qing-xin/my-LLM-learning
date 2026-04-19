@@ -1,4 +1,4 @@
-<img width="1246" height="184" alt="image" src="https://github.com/user-attachments/assets/684b5213-e8ee-4415-bff4-18e4bb042542" />## Task 2: Paper Reading
+## Task 2: Paper Reading
 读一篇论文并分享
 
 要求：2025年1月之后，关键词：LLM，benchmark，basketball，video
