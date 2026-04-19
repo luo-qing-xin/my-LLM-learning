@@ -28,14 +28,16 @@
 <img width="922" height="985" alt="image" src="https://github.com/user-attachments/assets/5228e5aa-4906-48a8-8166-05fb32f59f48" />
 ##### Baseline:
 https://chatgpt.2233.ai/share/e/69e44718-ddf8-8007-81d7-9c4c9944f66d
-方法 A：隐式学习（论文更可能用）
-不显式检测动作
-用 attention 自动学“哪些片段重要”
+
+- 机器学习方法 A：隐式学习
+  
+不显式检测动作，用 attention 自动学“哪些片段重要”
 
 👉 类似：
 
 attention(f1...fN) → 重点关注投篮/传球片段
-✅ 方法 B：显式检测（更强但更复杂）
+- 方法 B：显式检测（更强但更复杂）
+
 先做 action detection：
 哪一段是 shot / pass / rebound
 再针对不同技能分别分析
